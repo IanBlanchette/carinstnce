@@ -24,8 +24,8 @@ public class Car {
 
     public Car(String make, String model, int modelyear, double milage, double price) {
         this.model = model;
-        this.modelyear = modelyear;
-        this.milage = milage;
+        setModelyear(modelyear);
+        setMilage(milage);
         this.price = price;
         features = new ArrayList<>();
         makes= new ArrayList<>();
