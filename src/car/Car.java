@@ -23,7 +23,6 @@ public class Car {
     private ArrayList<String> features;
 
     public Car(String make, String model, int modelyear, double milage, double price) {
-        setMake(make);
         this.model = model;
         this.modelyear = modelyear;
         this.milage = milage;
@@ -37,7 +36,7 @@ public class Car {
         makes.add("gmc");
         makes.add("subaru");
         makes.add("ford");
-        
+        setMake(make);
     }
 
     public String getMake() {
