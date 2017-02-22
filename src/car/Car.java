@@ -17,12 +17,12 @@ public class Car {
     private String make;
     private ArrayList<String> makes;
     private String model;
-    private LocalDate modelyear;
+    private int modelyear;
     private double milage;
     private double price;
     private ArrayList<String> features;
 
-    public Car(String make, String model, LocalDate modelyear, double milage, double price) {
+    public Car(String make, String model, int modelyear, double milage, double price) {
         this.make = make;
         this.model = model;
         this.modelyear = modelyear;
@@ -48,7 +48,7 @@ public class Car {
         return model;
     }
 
-    public LocalDate getModelyear() {
+    public int getModelyear() {
         return modelyear;
     }
 
@@ -73,9 +73,9 @@ public class Car {
         this.model = model;
     }
 
-    public void setModelyear(LocalDate modelyear) {
+    public void setModelyear(int modelyear) {
         
-        if ((modelyear.isAfter(LocalDate.of(1900, 1, 1)))&&(modelyear.isBefore(LocalDate.now())))
+        if ((modelyear>1900)&&(modelyear<LocalDate.now().getYear()))
         this.modelyear = modelyear;
     }
 
@@ -95,7 +95,7 @@ public class Car {
     }
     public String toString()
     {
-        return make+","+model+","+modelyear.toString()+","+milage;
+        return make+","+model+","+modelyear+","+milage;
     }
 
     
