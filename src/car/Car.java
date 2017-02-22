@@ -82,8 +82,10 @@ public class Car {
 
     public void setModelyear(int modelyear) {
         
-        if ((modelyear>1900)&&(modelyear<LocalDate.now().getYear()))
-        this.modelyear = modelyear;
+        if ((modelyear>1900)&&(modelyear<LocalDate.now().getYear()+1))
+            this.modelyear = modelyear;
+        else
+            throw new IllegalArgumentException("year must be between 1900 and the current date +1");
     }
 
     public void setMilage(double milage) {
