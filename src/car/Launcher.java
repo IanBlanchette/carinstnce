@@ -40,6 +40,7 @@ public class Launcher extends Application {
         Pane createCarLayout = loader.load();
         
         Scene createCarScene = new Scene(createCarLayout);
+        
         primaryStage.setScene(createCarScene);
         primaryStage.setTitle("Car Thing");
         primaryStage.show();
