@@ -60,8 +60,14 @@ public class Car {
         return price;
     }
 
-    public ArrayList<String> getFeatures() {
-        return features;
+    public String getFeatures() {
+        StringBuilder sb = new StringBuilder();
+        for (String feature:features){
+        sb.append(feature);
+        sb.append(", ");
+        }
+
+        return sb.toString();
     }
 
     public void setMake(String make) {
