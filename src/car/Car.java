@@ -23,7 +23,7 @@ public class Car {
     private ArrayList<String> features;
 
     public Car(String make, String model, int modelyear, double milage, double price) {
-        this.make = make;
+        setMake(make);
         this.model = model;
         this.modelyear = modelyear;
         this.milage = milage;
@@ -73,6 +73,8 @@ public class Car {
     public void setMake(String make) {
         if (makes.contains(make))
             this.make = make.toLowerCase();
+        else
+            throw new IllegalArgumentException("must be a vaild make");
     }
 
     public void setModel(String model) {
