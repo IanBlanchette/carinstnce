@@ -35,8 +35,8 @@ private void createCarButtonPushed()
     {
         Car car1 = new Car(this.makeTextField.getText(),this.modelTextField.getText(), 
                 Integer.parseInt(this.yearTextField.getText()),
-                Double.parseDouble(this.sellingPriceTextField.getText()), 
-                this.featuresListTextField.getText()); 
+                Double.parseDouble(this.milageTextField.getText()), 
+                Double.parseDouble(this.sellingPriceTextField.getText()));
     System.out.printf("Car Created: %s %s%n", car1, car1.getClass());
     }
     catch (IllegalArguementException e)
