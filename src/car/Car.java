@@ -17,6 +17,7 @@ import java.util.regex.Pattern;
 public class Car {
 
     private String make;
+    private ArrayList<String> makes;
     private String model;
     private LocalDate modelyear;
     private double milage;
@@ -30,6 +31,15 @@ public class Car {
         this.milage = milage;
         this.price = price;
         features = new ArrayList<>();
+        makes= new ArrayList<>();
+        makes.add("honda");
+        makes.add("toyota");
+        makes.add("vw");
+        makes.add("bmw");
+        makes.add("gmc");
+        makes.add("subaru");
+        makes.add("ford");
+        
     }
 
     public String getMake() {
@@ -57,7 +67,8 @@ public class Car {
     }
 
     public void setMake(String make) {
-        this.make = make;
+        if (makes.contains(make))
+            this.make = make;
     }
 
     public void setModel(String model) {
@@ -66,7 +77,7 @@ public class Car {
 
     public void setModelyear(LocalDate modelyear) {
         
-        if (modelyear.isAfter(LocalDate.of(1900, 1, 1)))
+        if ((modelyear.isAfter(LocalDate.of(1900, 1, 1)))&&(modelyear.isBefore(LocalDate.now())))
         this.modelyear = modelyear;
     }
 
