@@ -7,8 +7,6 @@ package car;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  *
@@ -68,7 +66,7 @@ public class Car {
 
     public void setMake(String make) {
         if (makes.contains(make))
-            this.make = make;
+            this.make = make.toLowerCase();
     }
 
     public void setModel(String model) {
@@ -95,11 +93,10 @@ public class Car {
     public void setFeatures(ArrayList<String> features) {
         this.features = features;
     }
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public String toString()
+    {
+        return make+","+model+","+modelyear.toString()+","+milage;
     }
+
     
 }
